@@ -12,7 +12,7 @@ url = getURL("https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_
 CO2 <- readHTMLTable(url,which=2)
 
 CO2 = CO2[, 1:20] # incomplete data from the years 2008 on
-CO2 = CO2[-1,] # get rid of Qatar as its omissions are so great
+CO2 = CO2[-1,] # get rid of Qatar as its emissions are so great
 CO2[CO2=='-'] = 1
 
 names(CO2) = c("rank", "Country", 1990:2007)
